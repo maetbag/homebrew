@@ -6,6 +6,7 @@ class Libpuzzle < Formula
   depends_on 'gd'
 
   def install
+    system "./autogen.sh"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make install"
